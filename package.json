@@ -1,0 +1,24 @@
+{
+  "name": "httpdumper",
+  "version": "0.0.0",
+  "description": "httpdumper is a library that will help you debugging your http request.",
+  "main": "httpdumper.js",
+  "scripts": {
+    "start": "node httpdumper.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "request",
+    "http",
+    "dump"
+  ],
+  "author": "merlier",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "formidable": "^1.2.2",
+    "http": "0.0.1-security",
+    "http-proxy": "^1.18.1",
+    "minimist": "^1.2.5"
+  }
+}
