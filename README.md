@@ -4,4 +4,4 @@
 
     $ npm i
     
-    $ npm start --host="http://localhost:9000"
+    $ npm start -- --port="3000" --host="http://localhost:9000"
