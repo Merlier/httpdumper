@@ -16,9 +16,9 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.0",
+    "fast-proxy": "^1.7.0",
     "formidable": "^1.2.2",
     "http": "0.0.1-security",
-    "http-proxy": "^1.18.1",
     "minimist": "^1.2.5"
   }
 }
