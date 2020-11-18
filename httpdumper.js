@@ -5,6 +5,7 @@ const formidable = require('formidable');
 
 const port = argv.port || 3000;
 const host = argv.host || null;
+const uploadDir = argv.uploadDir || null;
 
 const server = http.createServer();
 const {proxy, close} = require('fast-proxy')({
@@ -42,7 +43,7 @@ server.on('request', function (req, res) {
     const body = [];
     const form = formidable({
         multiples: true,
-        uploadDir: './uploads',
+        uploadDir: uploadDir || undefined,
         keepExtensions: true
     });
     form.parse(req, (err, fields, files) => {
