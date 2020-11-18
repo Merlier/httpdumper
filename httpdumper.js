@@ -1,16 +1,5 @@
-const http = require('http');
-const argv = require('minimist')(process.argv.slice(2));
 const chalk = require('chalk');
 const formidable = require('formidable');
-
-const port = argv.port || 3000;
-const host = argv.host || null;
-const uploadDir = argv.uploadDir || null;
-
-const server = http.createServer();
-const {proxy, close} = require('fast-proxy')({
-    base: host
-});
 
 const urlDump = (req) => {
     console.log(chalk.white.bold(req.method), chalk.white.bold(req.url));
@@ -37,7 +26,7 @@ const httpDump = function (req) {
     headerDump(req);
 };
 
-server.on('request', function (req, res) {
+const httpDumper = (req, res, proxy = null, close = null, host = null, uploadDir = null) => {
     httpDump(req);
 
     const body = [];
@@ -64,9 +53,6 @@ server.on('request', function (req, res) {
     if (host) {
         proxy(req, res, req.url, {});
     }
+}
 
-});
-
-server.listen(port, () => {
-    console.log(`HttpDump listening at http://localhost:${port}`)
-});
+module.exports = httpDumper;
