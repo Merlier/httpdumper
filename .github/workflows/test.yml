@@ -23,6 +23,12 @@ jobs:
       - run: npm ci
       - run: npm run test:badges
 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report
+          path: coverage/lcov-report
+
       - name: Commit changes
         uses: EndBug/add-and-commit@v5
         with:
