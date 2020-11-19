@@ -3,6 +3,9 @@
   "version": "0.0.5",
   "description": "httpdumper is a library that will help you debugging your http request.",
   "main": "httpdumper.js",
+  "bin": {
+    "httpdumper": "bin/httpdumper.js"
+  },
   "scripts": {
     "start": "node ./bin/httpdumper.js",
     "test": "jest",
