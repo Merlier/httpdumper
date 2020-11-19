@@ -5,7 +5,9 @@
   "main": "httpdumper.js",
   "scripts": {
     "start": "node ./bin/httpdumper.js",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
   "keywords": [
     "request",
@@ -28,6 +30,7 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.6.3",
+    "jest-coverage-badges": "^1.1.2",
     "mock-req": "^0.2.0",
     "prettier": "^2.1.2"
   },
@@ -37,6 +40,11 @@
     ],
     "testPathIgnorePatterns": [
       "/node_modules/"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
     ]
   }
 }

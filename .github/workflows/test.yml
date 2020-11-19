@@ -25,4 +25,14 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm test
+      - run: npm run test:badges
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: ${{ secrets.USERNAME }}
+          author_email: ${{ secrets.USEREMAIL }}
+          message: "[CI] Generate badge test"
+          add: "coverage"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
