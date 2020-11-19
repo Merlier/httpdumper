@@ -26,6 +26,7 @@ const httpDump = (req) => {
     '\t',
     chalk.bgGray(new Date().toISOString()),
   );
+
   urlDump(req);
   headerDump(req);
 };
