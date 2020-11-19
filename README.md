@@ -1,5 +1,7 @@
 # httpdumper
 
+![npm test](https://github.com/Merlier/httpdumper/workflows/Node.js%20CI/badge.svg)
+
 ## Get started
 
     $ npm i
