@@ -1,6 +1,6 @@
 {
   "name": "httpdumper",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "httpdumper is a library that will help you debugging your http request.",
   "main": "httpdumper.js",
   "bin": {
