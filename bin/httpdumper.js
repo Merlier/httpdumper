@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const http = require('http');
 const argv = require('minimist')(process.argv.slice(2));
 const fastProxy = require('fast-proxy');
@@ -10,9 +12,11 @@ const uploadDir = argv.uploadDir || null;
 
 const server = http.createServer();
 
-const fastProxyHost = host ? fastProxy({
-  base: host,
-}) : null;
+const fastProxyHost = host
+  ? fastProxy({
+      base: host,
+    })
+  : null;
 const proxy = fastProxyHost.proxy || null;
 
 server.on('request', (req, res) => {
