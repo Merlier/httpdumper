@@ -21,8 +21,11 @@ const headerDump = (req) => {
 
 const httpDump = (req) => {
   console.log('\n\n');
-  console.log(chalk.white.bold('Date:'), '\t', chalk.bgGray(new Date().toISOString()));
-
+  console.log(
+    chalk.white.bold('Date:'),
+    '\t',
+    chalk.bgGray(new Date().toISOString()),
+  );
   urlDump(req);
   headerDump(req);
 };
@@ -38,17 +41,19 @@ const httpDumper = (req, res, proxy = null, host = null, uploadDir = null) => {
   });
   form.parse(req);
 
-  req.on('data', (chunk) => {
-    body.push(chunk);
-  }).on('end', () => {
-    console.log('\n');
-    console.log(chalk.white.bold(body));
-    const bufferBody = Buffer.concat(body).toString();
+  req
+    .on('data', (chunk) => {
+      body.push(chunk);
+    })
+    .on('end', () => {
+      console.log('\n');
+      console.log(chalk.white.bold(body));
+      const bufferBody = Buffer.concat(body).toString();
 
-    if (!host) {
-      res.end(bufferBody);
-    }
-  });
+      if (!host) {
+        res.end(bufferBody);
+      }
+    });
 
   if (host) {
     proxy(req, res, req.url, {});
