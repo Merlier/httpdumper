@@ -7,6 +7,7 @@
 [![Lines](https://raw.githubusercontent.com/Merlier/httpdumper/main/coverage/badge-lines.svg)](https://github.com/Merlier/httpdumper/actions?query=workflow%3Atest)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/merlier/httpdumper/blob/main/LICENSE)
 
+**httpdumper** is a library that will help you debugging your http request. 
 
 ## Get started
 
