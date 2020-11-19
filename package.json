@@ -1,8 +1,10 @@
 {
   "name": "httpdumper",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "httpdumper is a library that will help you debugging your http request.",
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "httpdumper.js",
   "scripts": {
     "start": "node ./bin/httpdumper.js",
