@@ -54,7 +54,7 @@ Options
 
 Examples
   $ httpdumper
-  $ httpdumper --port="3000" --host="http://localhost:9000" --uplaodDir="./uploads/"    # Check another path.
+  $ httpdumper --port="3000" --host="http://localhost:9000" --uplaodDir="./uploads/"
 ```
 
 ## License
