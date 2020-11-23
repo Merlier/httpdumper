@@ -9,7 +9,7 @@
 [![Lines](https://raw.githubusercontent.com/Merlier/httpdumper/main/coverage/badge-lines.svg)](https://github.com/Merlier/httpdumper/actions?query=workflow%3Atest)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/merlier/httpdumper/blob/main/LICENSE)
 
-[screen](https://raw.githubusercontent.com/Merlier/httpdumper/main/screen.png)
+![screen](https://raw.githubusercontent.com/Merlier/httpdumper/main/screen.png)
 
 ## Requirements
 
