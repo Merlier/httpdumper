@@ -9,10 +9,21 @@
 [![Lines](https://raw.githubusercontent.com/Merlier/httpdumper/main/coverage/badge-lines.svg)](https://github.com/Merlier/httpdumper/actions?query=workflow%3Atest)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/merlier/httpdumper/blob/main/LICENSE)
 
+[screen](https://raw.githubusercontent.com/Merlier/httpdumper/main/coverage/badge-statements.svg)
+
+## Requirements
+
+* Node >= 0.11.
+
 ## Install
 
 ```bash
 $ npm i -g httpdumper
+```
+
+```bash
+$ git clone
+$ npm i
 ```
 
 ## Usage
@@ -23,6 +34,27 @@ $ httpdumper --port="3000" --host="http://localhost:9000" --uplaodDir="./uploads
 
 ```bash
 $ npx httpdumper --port="3000" --host="http://localhost:9000" --uplaodDir="./uploads/"
+```
+
+To use from the project sources:
+```bash
+$ npm start -- --port="3000" --host="http://localhost:9000" --uplaodDir="./uploads/"
+```
+
+### Options
+
+```
+Usage
+  $ httpdumper <options>
+
+Options
+  --port          Port which httpdumper will listen to get the request (optional - default: port 3000)
+  --host          Host to forward the requests (optional - if not defined, it will return the body request)
+  --uplaodDir     Host to forward the requests (optional - default : os.tmpdir())
+
+Examples
+  $ httpdumper
+  $ httpdumper --port="3000" --host="http://localhost:9000" --uplaodDir="./uploads/"    # Check another path.
 ```
 
 ## License
