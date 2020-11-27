@@ -12,10 +12,16 @@
     "test:coverage": "npm test -- --coverage",
     "test:badges": "npm run test:coverage  && jest-coverage-badges"
   },
+  "homepage": "https://github.com/Merlier/httpdumper#readme",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/Merlier/httpdumper"
+  },
   "keywords": [
     "request",
     "http",
-    "dump"
+    "dump",
+    "log"
   ],
   "author": "merlier",
   "license": "MIT",
