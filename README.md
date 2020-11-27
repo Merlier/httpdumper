@@ -1,6 +1,9 @@
 # httpdumper
 
-> **httpdumper** is a library that will help you debugging your http request. 
+> **httpdumper** is a library that will help you debugging your http requests. 
+> You will have access to log details of the request.
+> If there is a file from your multipart/form-data form, it will be uploaded to the specified upload directory.
+> You could forward your requests to a host, so the client you're using will receive the original response.  
 
 [![BuildStatus](https://github.com/Merlier/httpdumper/workflows/test/badge.svg)](https://github.com/Merlier/httpdumper/actions?query=workflow%3Atest)
 [![Statements](https://raw.githubusercontent.com/Merlier/httpdumper/main/coverage/badge-statements.svg)](https://github.com/Merlier/httpdumper/actions?query=workflow%3Atest)
@@ -50,7 +53,7 @@ Usage
 Options
   --port          Port which httpdumper will listen to get the request (optional - default: port 3000)
   --host          Host to forward the requests (optional - if not defined, it will return the body request)
-  --uplaodDir     Host to forward the requests (optional - default : os.tmpdir())
+  --uplaodDir     Upload directory with the uploaded files from your requests  (optional - default : os.tmpdir())
 
 Examples
   $ httpdumper
