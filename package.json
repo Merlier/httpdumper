@@ -1,6 +1,6 @@
 {
   "name": "httpdumper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "httpdumper is a library that will help you debugging your http request.",
   "main": "httpdumper.js",
   "bin": {
@@ -14,8 +14,8 @@
   },
   "homepage": "https://github.com/Merlier/httpdumper#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/Merlier/httpdumper"
+    "type": "git",
+    "url": "https://github.com/Merlier/httpdumper"
   },
   "keywords": [
     "request",
